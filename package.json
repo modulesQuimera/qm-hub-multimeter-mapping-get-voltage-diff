@@ -1,5 +1,5 @@
 {
-  "name": "qm-hub-multimeter-mapping-get-voltage-diff",
+  "name": "qm-multimeter-mapping-get-voltage-diff",
   "version": "1.0.1",
   "description": "multimeter mapping get-voltage-diff module - Node-Red",
   "main": "mapping-get-voltage-diff.js",
