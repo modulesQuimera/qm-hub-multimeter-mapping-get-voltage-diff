@@ -1,6 +1,6 @@
 {
   "name": "qm-multimeter-mapping-get-voltage-diff",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "multimeter mapping get-voltage-diff module - Node-Red",
   "main": "mapping-get-voltage-diff.js",
   "scripts": {

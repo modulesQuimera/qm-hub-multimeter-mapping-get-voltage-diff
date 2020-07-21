@@ -1,6 +1,6 @@
 <style>
-    .label-resp{
-        width: 40% !important;
+    .label-resp-diff{
+        width: 23% !important;
     }
 
     .input-resp-diff{
@@ -20,49 +20,54 @@
 </style>
 
 <script type="text/html" data-template-name="mapping-get-voltage-diff">
-    <!-- <div class="form-row">
-        <label for="node-config-input-name"><i class="fa fa-tag"></i> Name</label>
-        <input type="text" id="node-config-input-name" style="width:87%; margin-left: -45px">
-    </div> -->
+    <div class="form-row columm">
+        <label  for="node-config-input-name"><i class="fa fa-tag"></i> Mapping Name</label>
+        <input type="text" id="node-config-input-name" style="width:80%;">
+    </div>
+    <div class="form-row columm">
+        <label  for="node-config-input-slot"><i class="fa fa-sliders"></i> Slot</label>
+        <input min="0" type="number" id="node-config-input-slot" style="width:20%;">
+    </div>
+    <hr class="hr-full">
     <h2>SLOT 1 Multimeter modular mapping - getVoltageDiff</h2>
     <div class="form-row">
-        <label class="label-resp"> A1 | B1 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort1">
+        <label class="label-resp-diff"> A1 | B1 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort1">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A2 | B2 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort2">
+        <label class="label-resp-diff"> A2 | B2 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort2">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A3 | B3 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort3">
+        <label class="label-resp-diff"> A3 | B3 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort3">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A4 | B4 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort4">
+        <label class="label-resp-diff"> A4 | B4 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort4">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A5 | B5 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort5">
+        <label class="label-resp-diff"> A5 | B5 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort5">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A6 | B6 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort6">
+        <label class="label-resp-diff"> A6 | B6 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort6">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A7 | B7 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort7">
+        <label class="label-resp-diff"> A7 | B7 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort7">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A8 | B8 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort8">
+        <label class="label-resp-diff"> A8 | B8 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort8">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A9 | B9 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort9">
+        <label class="label-resp-diff"> A9 | B9 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort9">
     </div>
     <div class="form-row">
-        <label class="label-resp"> A10 | B10 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort10" >
+        <label class="label-resp-diff"> A10 | B10 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort10" >
     </div>
     <div class="form-row">
-        <label class="label-resp"> A11 | B11 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort11" >
+        <label class="label-resp-diff"> A11 | B11 - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort11" >
     </div>
     <div class="form-row">
-        <label class="label-resp"> APW | BPW - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort12" >
+        <label class="label-resp-diff"> APW | BPW - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort12" >
     </div>
     <div class="form-row">
-        <label class="label-resp"> AMX | BMX - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort13" >
+        <label class="label-resp-diff"> AMX | BMX - </label><input class="input-resp-diff" maxlength="8" type="text" id="node-config-input-labelPort13" >
     </div>
 </script>
 
@@ -74,33 +79,34 @@
     RED.nodes.registerType('mapping-get-voltage-diff',{
         category: 'config',
         defaults: {
-            name: {value:"Multimeter modular slot 1 mapping - getVoltageDiff"},
-            labelPort1: {value:"TP", required: true},
-            valuePort1: {value:"0", required: true},
-            labelPort2: {value:"TP", required: true},
-            valuePort2: {value:"1", required: true},
-            labelPort3: {value:"TP", required: true},
-            valuePort3: {value:"2", required: true},
-            labelPort4: {value:"TP", required: true},
-            valuePort4: {value:"3", required: true},
-            labelPort5: {value:"TP", required: true},
-            valuePort5: {value:"4", required: true},
-            labelPort6: {value:"TP", required: true},
-            valuePort6: {value:"5", required: true},
-            labelPort7: {value:"TP", required: true},
-            valuePort7: {value:"6", required: true},
-            labelPort8: {value:"TP", required: true},
-            valuePort8: {value:"7", required: true},
-            labelPort9: {value:"TP", required: true},
-            valuePort9: {value:"8", required: true},
-            labelPort10: {value:"TP", required: true},
-            valuePort10: {value:"9", required: true},
-            labelPort11: {value:"TP", required: true},
-            valuePort11: {value:"10", required: true},
-            labelPort12: {value:"TP", required: true},
-            valuePort12: {value:"11", required: true},
-            labelPort13: {value:"TP", required: true},
-            valuePort13: {value:"12", required: true},
+            name: {value:""},
+            slot: {value:"", required:true},
+            labelPort1: {value:""},
+            valuePort1: {value:"0"},
+            labelPort2: {value:""},
+            valuePort2: {value:"1"},
+            labelPort3: {value:""},
+            valuePort3: {value:"2"},
+            labelPort4: {value:""},
+            valuePort4: {value:"3"},
+            labelPort5: {value:""},
+            valuePort5: {value:"4"},
+            labelPort6: {value:""},
+            valuePort6: {value:"5"},
+            labelPort7: {value:""},
+            valuePort7: {value:"6"},
+            labelPort8: {value:""},
+            valuePort8: {value:"7"},
+            labelPort9: {value:""},
+            valuePort9: {value:"8"},
+            labelPort10: {value:""},
+            valuePort10: {value:"9"},
+            labelPort11: {value:""},
+            valuePort11: {value:"10"},
+            labelPort12: {value:""},
+            valuePort12: {value:"11"},
+            labelPort13: {value:""},
+            valuePort13: {value:"12"},
         },
         label: function() { return this.name || "" },
     });
